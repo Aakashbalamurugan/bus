@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Student</title>
+  <link rel="stylesheet" href="{{ url_for('static', path='add_student.css') }}">
+</head>
+<body>
+  <h2>Add Student</h2>
+
+  <div class="form-container">
+    <div class="form-group">
+      <label for="enrollment_number">Enrollment Number:</label>
+      <input type="text" id="enrollment_number" placeholder="Enter the Enrollment No." required>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Student Name:</label>
+      <input type="text" id="name" placeholder="Enter the Student Name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="parent_contact">Parent Contact:</label>
+      <input type="text" id="parent_contact" placeholder="Enter the Parent Contact" required>
+    </div>
+
+    <div class="form-group">
+      <label for="bus_assigned_id">Bus Assigned ID:</label>
+      <input type="number" id="bus_assigned_id" placeholder="Enter the Bus Number" required>
+    </div>
+    <br>
+    <button onclick="addStudent()">Add Student</button>
+  </div>
+
+  <div id="response-container"></div>
+
+  <script src="{{ url_for('static', path='add_student.js') }}"></script>
+</body>
+</html>

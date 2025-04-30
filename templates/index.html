@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition & Attendance</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='index.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Face Recognition & Attendance</h1>
+    
+    <!-- Webcam Stream -->
+    <video id="webcam" autoplay></video>
+    
+    <!-- Capture Button -->
+    <div class="button-container">
+        <button class="capture-btn" id="captureBtn">Capture</button>
+    </div>
+
+    <!-- Captured Photo -->
+    <div id="photoContainer" style="display: none;">
+        <img id="photo" src="" alt="Captured Image">
+        <div class="button-container">
+            <button class="retake-btn" id="retakeBtn">Retake</button>
+            <button class="submit-btn" id="markAttendanceBtn">Mark Attendance</button>
+        </div>
+    </div>
+
+    <!-- Attendance Form -->
+    <div id="attendanceForm">
+        <h3>Attendance Form</h3>
+        <label>Bus Number:</label>
+        <input type="text" id="bus-number" placeholder="Enter Bus Number">
+        <br><br>
+        <label><input type="radio" name="session" value="morning" id="morning"> Morning</label>
+        <label><input type="radio" name="session" value="evening" id="evening"> Evening</label>
+        <br><br>
+        <div class="sumbit-div"><button class="submit-btn" id="submitAttendance">Submit</button></div>
+        
+    </div>
+
+    <!-- API Response -->
+    <div id="apiResponse" style="margin-top: 20px; display: none; ">
+        <pre id="response"></pre>
+    </div>
+</div>
+
+<script src="{{ url_for('static', path='index.js') }}"></script>
+</body>
+</html>
+
+
+

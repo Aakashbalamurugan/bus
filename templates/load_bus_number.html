@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Number Configuration</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='load_bus_number.css') }}">
+</head>
+<body>
+
+    <h3>Bus Number Configuration</h3>
+    
+    <div class="input-container">
+        <label for="bus-number">Bus Number:</label>
+        <input type="text" id="bus-number" placeholder="Enter Bus Number">
+        <button onclick="saveBusNumber()">Save Bus Number</button>
+    </div>
+
+    <script src="{{ url_for('static', path='load_bus_number.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='main_admin.css') }}">
+</head>
+<body>
+
+    <div class="overlay"></div> <!-- Transparent Background -->
+
+    <div class="content"> 
+        <h1>IDHAYA COLLEGE OF ARTS AND SCIENCE FOR WOMEN</h1>  
+        <h2>BUS ATTENDANCE</h2>
+        <h3>Admin Panel</h3>  
+
+        <div class="button-container">
+            <a href="/send_notification" class="button">Send Notification</a>
+            <a href="/load_bus_number" class="button">Save Bus Number</a>
+            <a href="/student_report" class="button">Get Student Report</a>
+            <a href="/date_range_report" class="button">Get Date Range Report</a>
+            <a href="/add_student" class="button">Add Student</a> 
+            <a href="/monthly_report" class="button">Get Monthly Report</a>
+            <a href="/add_bus" class="button">Add Bus</a>
+            <a href="/list_buses" class="button">List All Buses</a>
+            <a href="/list_students" class="button">List All Students</a>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', path='main_admin.js') }}"></script>
+</body>
+</html>

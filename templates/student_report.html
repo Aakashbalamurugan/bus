@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='student_report.css') }}">
+</head>
+<body>
+    <h2>Student Attendance Report</h2>
+
+    <!-- Enrollment ID Input -->
+    <label for="enrollment-id">Enter Enrollment ID:</label>
+    <input type="text" id="enrollment-id" placeholder="Enter Enrollment ID">
+    <button onclick="getStudentReport()">Get Report</button>
+
+    <!-- Bus Number Display -->
+    <div id="bus-container" style="display: none;">
+        Bus Number: <span id="display_bus"></span>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div id="loading" style="display: none;">Loading...</div>
+
+    <!-- Report Table -->
+    <table id="report-table" style="display:none;">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Morning Status</th>
+                <th>Morning Time</th>
+                <th>Evening Status</th>
+                <th>Evening Time</th>
+            </tr>
+        </thead>
+        <tbody id="report-body"></tbody>
+    </table>
+
+    <script src="{{ url_for('static', path='student_report.js') }}"></script>
+</body>
+</html>

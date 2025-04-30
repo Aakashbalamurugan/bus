@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Attendance Reports</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='admin3.css') }}">
+</head>
+<body>
+
+    <h2>Attendance Reports</h2>
+
+    <label for="start-date">Start Date:</label>
+    <input type="date" id="start-date" required>
+    
+    <label for="end-date">End Date:</label>
+    <input type="date" id="end-date" required>
+
+    <button onclick="fetchReport()">Get Report</button>
+
+    <div id="date-container" class="date-list"></div>
+    <div id="report-container"></div>
+
+    <script src="{{ url_for('static', path='admin3.js') }}"></script>
+</body>
+</html>

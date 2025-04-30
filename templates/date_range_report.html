@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='date_range_report.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Date Range Attendance Report</h2>
+
+        <div class="print-info">
+            Year: 2025 | Bus Number: <span id="print-bus">All Buses</span>
+        </div>
+        <div class="print-info">
+            Date Range: 10-03-2025 to 20-03-2025
+        </div>
+
+        <div class="input-container">
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date" required>
+
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date" required>
+
+            <label for="bus">Select Bus Number:</label>
+            <select id="bus">
+                <option value="all">All Buses</option>
+                <option value="1">Bus No: 1</option>
+                <option value="2">Bus No: 2</option>
+                <option value="3">Bus No: 3</option>
+                <option value="3">Bus No: 4</option>
+                <option value="3">Bus No: 5</option>
+                <option value="3">Bus No: 6</option>
+                <option value="3">Bus No: 7</option>
+            </select>
+        </div>
+
+        <div class="button-container">
+            <button onclick="fetchReport()">Get Report</button>
+            <button onclick="preparePrint()">Print Report</button>
+        </div>
+
+        <table id="attendanceTable">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Enrollment ID</th>
+                    <th>Name</th>
+                    <th>Bus No.</th>
+                    <th>Morning Status</th>
+                    <th>Morning Time</th>
+                    <th>Evening Status</th>
+                    <th>Evening Time</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    
+    <script src="{{ url_for('static', path='date_range_report.js') }}"></script>
+</body>
+</html>

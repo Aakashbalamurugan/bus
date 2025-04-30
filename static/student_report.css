@@ -1,0 +1,63 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+
+/* Input and Button Styling */
+input, button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Button Specific Styles */
+button {
+    background-color: #66b3ff; /* Light Blue */
+    border: 1px solid black; /* Thick Black Border */
+    color: black;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0px;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #3399ff; /* Slightly darker blue on hover */
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Header Styling */
+th {
+    background-color: #f2f2f2;
+}
+
+/* Bus Number Display */
+#bus-container {
+    display: none; /* Initially hidden */
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Loading Indicator */
+#loading {
+    display: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #66b3ff;
+}

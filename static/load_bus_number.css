@@ -1,0 +1,33 @@
+	body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+}
+
+button {
+    background-color: #66b3ff; /* Light Blue */
+    border: 1px solid black; /* Thick Black Border */
+    color: black;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0px;
+}
+
+button:hover {
+    background-color: #3399ff; /* Slightly darker blue on hover */
+}

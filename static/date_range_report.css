@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid black;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+select, input {
+    padding: 10px;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 0px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+@media print {
+    .input-container, .button-container {
+        display: none;
+    }
+    .print-info {
+        display: block !important;
+        font-size: 18px;
+        margin: 10px 0;
+        font-weight: bold;
+    }
+    .container {
+        border: 2px solid black;
+        padding: 15px;
+    }
+    table {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.print-info {
+    display: none;
+}

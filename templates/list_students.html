@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='list_students.css') }}">
+</head>
+<body>
+    <h2>List of Students</h2>
+    <div id="student-tables"></div> <!-- Tables will be generated here -->
+
+    <script src="{{ url_for('static', path='list_students.js') }}"></script>
+</body>
+</html>

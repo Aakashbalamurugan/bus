@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 90%;
+    max-width: 600px;
+    background: white;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+h1 {
+    color: #333;
+}
+video, img {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.capture-btn { background: #007bff; color: white; }
+.retake-btn { background: #dc3545; color: white; display: none; }
+.submit-btn { background: #28a745; color: white; display: none; }
+button:hover { opacity: 0.5; }
+#attendanceForm { display: none; }
+.sumbit-div {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}

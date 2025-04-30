@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Absence Notifications</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='absent_Notifications.css') }}">
+</head>
+<body>
+
+    <h2>Send Absence Notifications</h2>
+
+    <label for="date">Select Date:</label>
+    <input type="date" id="date" required>
+
+    <label for="session">Select Session:</label>
+    <select id="session" required>
+        <option value="morning">Morning</option>
+        <option value="evening">Evening</option>
+    </select>
+
+    <br><br>
+    <button onclick="sendNotification()">Send Notification</button>
+
+    <div id="response-container"></div>
+
+    <script src="{{ url_for('static', path='absent_Notifications.js') }}"></script>
+
+</body>
+</html>

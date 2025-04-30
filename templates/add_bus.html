@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Bus</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='add_bus.css') }}">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Add Bus</h2>
+        <form onsubmit="addBus(); return false;">
+            <label for="bus_number">Bus Number:</label>
+            <input type="text" id="bus_number" name="bus_number" 
+                   placeholder="Bus Number" required 
+                   title="Bus number must contain only digits">
+
+            <label for="driver_name">Driver Name:</label>
+            <input type="text" id="driver_name" name="driver_name" 
+                   placeholder="Driver Name" required>
+
+            <label for="driver_contact">Driver Contact:</label>
+            <input type="text" id="driver_contact" name="driver_contact" 
+                   placeholder="Driver Contact" maxlength="10" required 
+                   title="Enter a valid 10-digit phone number">
+
+            <br><br>
+            <button type="submit">Add Bus</button>
+        </form>
+
+        <div id="response-container"></div>
+    </div>
+
+    <script src="{{ url_for('static', path='add_bus.js') }}"></script>
+
+</body>
+</html>
