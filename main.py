@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from app.routes import student_routes, attendance_routes, bus_routes, sms
-from app.face_recognition import predict_faces
+# from app.face_recognition import predict_faces
 
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
@@ -85,7 +85,7 @@ async def list_buses(request: Request):
 app.include_router(student_routes.router)
 app.include_router(attendance_routes.router)
 app.include_router(bus_routes.router)
-app.include_router(predict_faces.router)
+# app.include_router(predict_faces.router)
 app.include_router(sms.router)
 
 @app.get("/status")

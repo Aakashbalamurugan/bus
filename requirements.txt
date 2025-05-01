@@ -5,3 +5,5 @@ pydantic
 tensorflow
 scipy
 keras-facenet
+twilio
+python-dotenv
